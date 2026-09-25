@@ -43,7 +43,7 @@
 <p>Kibble may process Discord message content when necessary to recognize commands, run games and economy features, apply moderation features, and apply temporary speech transformations. Kibble is not designed to permanently archive normal conversation content simply because a user speaks in a channel.</p>
 
 <h2>3. Webhooks</h2>
-<p>Some Kibble features may use Discord webhooks to repost transformed messages while preserving a user’s display name and avatar.</p>
+<p>Some Kibble features may use Discord webhooks to repost transformed messages while preserving a user’s display name and avatar. Kibble labels these webhook reposts as Kibble-generated transformations (for example, “Kibble Effect” or “Kibble Muzzle”) rather than presenting them as ordinary user messages.</p>
 
 <h2>4. Why Information Is Collected</h2>
 <p>Information is used to operate Kibble and provide persistent balances, inventories, collectibles, trading, marketplace listings, games, leaderboards, achievements, levels, classes, cosmetics, quests, daily streaks, statistics, moderation tools, cooldowns, server events, and other Kibble functionality.</p>
@@ -61,16 +61,18 @@
 <p>Kibble includes features that may allow authorized server staff to perform actions involving other users. Kibble relies on Discord permissions to restrict certain administrative features.</p>
 
 <h2>9. Data Retention</h2>
-<p>Gameplay data may remain stored for as long as necessary to maintain Kibble’s persistent features. Some temporary information is automatically removed after it is no longer needed.</p>
+<p>Kibble keeps persistent gameplay data only for as long as it is needed to provide its features. Temporary effects, game state, and cooldown-related data expire automatically when no longer needed.</p>
+<p>Users can view a summary of stored Kibble data with <code>.mydata</code> and can request deletion directly in Discord with <code>.deletedata</code>.</p>
 
 <h2>10. Server Resets</h2>
 <p>Authorized administrators may use Kibble’s server-reset functionality to remove Kibble data associated with that Discord server. Once reset, this data may not be recoverable.</p>
 
 <h2>11. Removing Kibble From a Server</h2>
-<p>Removing Kibble from a Discord server does not necessarily guarantee that all previously stored database records are immediately deleted.</p>
+<p>When Kibble is removed from a Discord server, Kibble automatically deletes the persistent guild-scoped records it stores for that server from its application database.</p>
+<p>Messages previously sent into Discord may remain in the Discord server if Kibble no longer has permission or access to remove them.</p>
 
 <h2>12. User Data Requests</h2>
-<p>Users may contact the Kibble owner to ask about data associated with their Discord account. Where reasonably possible, users may request deletion of Kibble data associated with their Discord user ID.</p>
+<p>Users can use <code>.mydata</code> to view a category/count summary of Kibble data associated with their Discord user ID and <code>.deletedata</code> to permanently delete stored Kibble database records associated with their account. Users may also contact the Kibble owner through the support method published with the bot for privacy or data requests.</p>
 
 <h2>13. Children’s Privacy</h2>
 <p>Kibble is intended to be used only by individuals who are permitted to use Discord under Discord’s applicable age requirements.</p>
